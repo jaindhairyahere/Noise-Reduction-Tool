@@ -5,6 +5,9 @@ $packageDir = ".\package"
 $exeName = "noise_reduction_tool.exe"
 $iconFile = "noise_reduction_tool.ico"
 
+Write-Host "Installing ttkthemes..."
+python -m pip install --upgrade ttkthemes
+
 # Clean old build and dist folders
 if (Test-Path $distDir) { Remove-Item -Recurse -Force $distDir }
 if (Test-Path $packageDir) { Remove-Item -Recurse -Force $packageDir }
